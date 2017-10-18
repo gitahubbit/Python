@@ -1,3 +1,9 @@
+###################################################
+# EH300 Projector control script (Turn it On/Off)
+# Author: Andreas Senn
+# Date: November 2013, Zurich
+###################################################
+
 __author__ = 'Beast'
 
 import serial
@@ -23,6 +29,7 @@ def send(command):
 if cmd.upper() == "ON":
 	print("Turning projector ON")
 	send(CMD_PWR_ON)
+	
 elif cmd.upper() == "OFF":
 	print("Turning projector OFF")
 	result = send(CMD_PWR_OFF)
